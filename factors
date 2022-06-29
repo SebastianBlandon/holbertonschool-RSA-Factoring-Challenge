@@ -4,10 +4,10 @@
 while IFS= read -r LINE
 do
     let FLAG=1
+    let DIV=2
     while [ $FLAG -eq 1 ]
     do
-        let DIV=2
-        let REST=$(($LINE%$DIV))
+	REST=$(($LINE%$DIV))
         if [[ $REST -eq 0 ]]
         then
             let NUM=$LINE
